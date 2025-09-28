@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Пробная страница</title>
+  <style>
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.5;margin:0}
+    header, footer{background:#0f172a;color:#e2e8f0;padding:16px}
+    nav a{text-decoration:none;margin-right:12px;color:#38bdf8}
+    main{padding:20px;max-width:860px;margin:auto}
+    img{max-width:100%;height:auto;display:block;margin:12px 0}
+    ul, ol{padding-left:22px}
+    footer small{opacity:.8}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Мой первый HTML</h1>
+    <nav aria-label="Главная навигация">
+      <a href="#about">О сайте</a>
+      <a href="#features">Список возможностей</a>
+      <a href="#steps">Шаги</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>О странице</h2>
+      <p>Это пробный файл <code>index.html</code>, созданный для проверки базовой разметки и валидности. Здесь используются семантические теги: <strong>header</strong>, <strong>nav</strong>, <strong>main</strong>, <strong>footer</strong>, а также заголовки, абзацы, ссылки, изображения и списки.</p>
+      <p>Ниже — пример изображения и ссылки:</p>
+      <a href="https://validator.w3.org/" target="_blank" rel="noopener">Проверить страницу на валидаторе</a>
+      <img src="https://via.placeholder.com/800x300?text=Demo+Image" alt="Демонстрационное изображение-заглушка 800×300">
+    </section>
+
+    <section id="features">
+      <h2>Ненумерованный список (ul/li)</h2>
+      <ul>
+        <li>Семантическая разметка</li>
+        <li>Адаптивные стили</li>
+        <li>Текстовые ссылки (a)</li>
+        <li>Картинка (img) с корректным <code>alt</code></li>
+      </ul>
+    </section>
+
+    <section id="steps">
+      <h2>Нумерованный список (ol/li)</h2>
+      <ol>
+        <li>Откройте файл в браузере.</li>
+        <li>Проверьте на валидаторе W3C.</li>
+        <li>Исправьте ошибки, если появятся.</li>
+        <li>Отформатируйте код и сохраните изменения.</li>
+      </ol>
+    </section>
+  </main>
+
+  <footer>
+    <small>© 2025 Пробная страница. Сделано для обучения HTML.</small>
+  </footer>
+</body>
+</html>
