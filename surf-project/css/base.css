@@ -1,0 +1,123 @@
+:root{
+  --ink:#0B2740;
+  --muted:#2e4a5b;
+  --ring:#d7e6f2;
+  --accent:#FF3B30;
+}
+
+html,body{margin:0}
+.container{ width:min(1180px,92vw); margin-inline:auto }
+
+/* ==== HEADER (как в макете) ==== */
+.site-header{
+  position:relative; isolation:isolate;
+  padding:14px 0;
+  background:linear-gradient(#f4f8fc, #eef6fb);
+}
+.hdr-bg{
+  position:absolute; inset:0; z-index:-2;
+  background:url("../images/bg-image 1.png") right top/cover no-repeat;
+  opacity:.5;
+}
+.hdr-decor{ position:absolute; z-index:-1; pointer-events:none; user-select:none }
+.hdr-decor--left{ left:0; top:0; height:140px; transform:translateX(-10%) }
+
+.hdr-row{
+  display:grid; grid-template-columns:auto 1fr auto;
+  align-items:center; gap:16px;
+}
+.hdr-logo img{ height:34px; display:block }
+
+/* ==== HERO (первый экран) ==== */
+.hero{ background:linear-gradient(#eef6fb, #f7fbff); padding:22px 0 8px }
+.hero-grid{ display:grid; grid-template-columns:1fr 430px; gap:28px; align-items:end }
+.hero-left{ padding-top:6px }
+.accent-hand{ font-family:"Surf Script", cursive; color:var(--accent); font-weight:700 }
+.hero-address{ font-size:20px }
+
+.hero-title{
+  color:var(--ink); font-weight:800;
+  font-size:clamp(42px, 4.6vw, 92px);
+  line-height:1.02; letter-spacing:-.02em;
+  position:relative; display:inline-block;
+}
+.hero-underline{
+  position:absolute; left:50%; top:45%;
+  width:260px; height:12px; transform:translateX(-50%);
+  background:radial-gradient(ellipse at center, rgba(255,59,48,.9), rgba(255,59,48,0) 70%);
+  filter:blur(1.2px);
+}
+.hero-stamp{
+  position:absolute; left:52%; top:33%;
+  transform:translate(-50%,-50%) rotate(-12deg);
+  width:94px; height:94px; border-radius:50%;
+  display:grid; place-items:center;
+  background:var(--accent); color:#fff; font:800 11px/1 "Surf Sans", system-ui;
+  text-transform:uppercase; box-shadow:0 10px 24px rgba(255,59,48,.32);
+}
+.hero-spacer{ display:inline-block; width:.3ch }
+.hero-lead{ max-width:520px; margin-top:14px; color:var(--muted) }
+
+.hero-right img{
+  width:100%; height:auto; display:block;
+  border-radius:16px; /* в макете есть скругление */
+  box-shadow:0 14px 34px rgba(11,39,64,.16);
+}
+/* позиционирование правой картинки как в макете */
+.hero-right{
+  align-self: end;          /* прижать к низу строки сетки */
+  margin-top: 34px;         /* опустить ниже заголовка */
+}
+/* адаптив, чтобы картинка ушла наверх справа на планшете */
+@media (max-width:1000px){
+  .hero-grid{ grid-template-columns:1fr }
+  .hero-right{ order:-1; justify-self:end; width:min(380px,70vw) }
+}
+/* ==== BENEFITS (4 карточки под героем) ==== */
+.benefits{
+  background: linear-gradient(#eef6fb 0%, #f7fbff 100%);
+  padding: 18px 0 40px;
+}
+.benefits__row{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+/* тёмная/светлая карточки как в макете */
+.card{ background:#fff; border-radius:20px; box-shadow:0 14px 34px rgba(11,39,64,.10) }
+.benefit{
+  padding: 18px;
+  border-radius: 24px;
+  background: #0d2f47;          /* тёмные 1 и 3 */
+  color: #fff;
+}
+.benefit--light{
+  background: #ffffff;          /* светлые 2 и 4 */
+  color: var(--ink);
+}
+
+.benefit__img{ position:relative; margin-bottom:12px }
+.benefit__img img{
+  width:100%; height:180px; object-fit:cover;
+  border-radius:18px;
+  box-shadow:0 10px 28px rgba(11,39,64,.12);
+}
+.benefit__badge{
+  position:absolute; right:-8px; top:-10px;
+  width:46px; height:46px; border-radius:50%;
+  background: var(--accent); color:#fff; font-weight:800;
+  display:grid; place-items:center;
+  box-shadow: 0 10px 20px rgba(255,59,48,.35);
+}
+.benefit__title{ margin:6px 0 6px; font-size:18px; font-weight:800 }
+.benefit__text{ margin:0; color: #d7e6f2 }
+.benefit--light .benefit__text{ color:#5a7282 }
+
+/* адаптив сетки */
+@media (max-width: 1100px){
+  .benefits__row{ grid-template-columns: 1fr 1fr }
+}
+@media (max-width: 560px){
+  .benefits__row{ grid-template-columns: 1fr }
+}
