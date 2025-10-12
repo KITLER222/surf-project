@@ -28,45 +28,72 @@ html,body{margin:0}
 }
 .hdr-logo img{ height:34px; display:block }
 
-/* ==== HERO (первый экран) ==== */
-.hero{ background:linear-gradient(#eef6fb, #f7fbff); padding:22px 0 8px }
-.hero-grid{ display:grid; grid-template-columns:1fr 430px; gap:28px; align-items:end }
-.hero-left{ padding-top:6px }
-.accent-hand{ font-family:"Surf Script", cursive; color:var(--accent); font-weight:700 }
-.hero-address{ font-size:20px }
+/* ===== HERO точные размеры/позиции ===== */
+.hero{ background:linear-gradient(#eef6fb, #f7fbff); padding:28px 0 10px }
+.hero-grid{
+  display:grid;
+  grid-template-columns: 1fr 520px;   /* картинка крупнее как в макете */
+  gap: 36px;
+  align-items: end;
+}
+.hero-left{ padding-top:8px }
 
 .hero-title{
-  color:var(--ink); font-weight:800;
-  font-size:clamp(42px, 4.6vw, 92px);
-  line-height:1.02; letter-spacing:-.02em;
-  position:relative; display:inline-block;
+  color:var(--ink);
+  font-weight:800;
+  font-size: clamp(48px, 5vw, 96px); /* крупнее */
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+  position: relative;
+  display: inline-block;
+  margin: 0 0 14px;
 }
-.hero-underline{
-  position:absolute; left:50%; top:45%;
-  width:260px; height:12px; transform:translateX(-50%);
-  background:radial-gradient(ellipse at center, rgba(255,59,48,.9), rgba(255,59,48,0) 70%);
-  filter:blur(1.2px);
-}
-.hero-stamp{
-  position:absolute; left:52%; top:33%;
-  transform:translate(-50%,-50%) rotate(-12deg);
-  width:94px; height:94px; border-radius:50%;
-  display:grid; place-items:center;
-  background:var(--accent); color:#fff; font:800 11px/1 "Surf Sans", system-ui;
-  text-transform:uppercase; box-shadow:0 10px 24px rgba(255,59,48,.32);
-}
-.hero-spacer{ display:inline-block; width:.3ch }
-.hero-lead{ max-width:520px; margin-top:14px; color:var(--muted) }
 
-.hero-right img{
-  width:100%; height:auto; display:block;
-  border-radius:16px; /* в макете есть скругление */
-  box-shadow:0 14px 34px rgba(11,39,64,.16);
+/* красная подчеркушка (если есть файл из фигмы — подставь его) */
+.hero-underline{
+  position: absolute;
+  left: 46%;
+  top: 56%;
+  width: 320px;
+  height: 16px;
+  transform: translateX(-50%);
+  /* если у тебя есть файл "подчерк.png", используй его: */
+  /* background: url("../images/подчерк.png") center/contain no-repeat; */
+  background: radial-gradient(ellipse at center, rgba(255,59,48,.9), rgba(255,59,48,0) 70%);
+  filter: blur(1.1px);
 }
-/* позиционирование правой картинки как в макете */
+
+/* красная «печать» в разрыве */
+.hero-stamp{
+  position: absolute;
+  left: 51.5%;
+  top: 38%;
+  transform: translate(-50%,-50%) rotate(-12deg);
+  width: 100px; height: 100px;
+  border-radius: 50%;
+  display: grid; place-items: center;
+  background: var(--accent);
+  color: #fff;
+  font: 800 11px/1 "Surf Sans", system-ui;
+  text-transform: uppercase;
+  box-shadow: 0 12px 26px rgba(255,59,48,.32);
+}
+
+/* отступ между "ВМЕСТЕ" и "С НАМИ!" */
+.hero-spacer{ display:inline-block; width:.35ch }
+.hero-lead{ max-width:560px; margin-top: 12px; color: var(--muted) }
+
+/* картинка справа опущена и с большим радиусом/тенью */
 .hero-right{
-  align-self: end;          /* прижать к низу строки сетки */
-  margin-top: 34px;         /* опустить ниже заголовка */
+  align-self: end;
+  margin-top: 46px;              /* опустить ниже заголовка */
+}
+.hero-right img{
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 18px;
+  box-shadow: 0 18px 40px rgba(11,39,64,.16);
 }
 /* адаптив, чтобы картинка ушла наверх справа на планшете */
 @media (max-width:1000px){
@@ -121,3 +148,164 @@ html,body{margin:0}
 @media (max-width: 560px){
   .benefits__row{ grid-template-columns: 1fr }
 }
+
+/* === ФОН: шапка + hero имеют один background, тянем его и на верх бенефитов === */
+.site-header,
+.hero{
+  background:
+    linear-gradient(#f4f8fc 0%, #eef6fb 100%),
+    url("../images/bg-image 1.png") left top / cover no-repeat;
+}
+
+/* верхняя половина секции с карточками прикрыта тем же бэкграундом */
+.benefits{ position:relative; padding: 24px 0 56px; }
+.benefits::before{
+  content:"";
+  position:absolute; inset:0 0 auto 0;
+  height:50%;                /* ровно половина секции */
+  background: url("../images/bg-image 1.png") left top / cover no-repeat;
+  opacity:.9;                /* можно подстроить под реф */
+  pointer-events:none; z-index:0;
+}
+.benefits > .container{ position:relative; z-index:1; }
+
+/* === HERO: только левый столбец (сёрфера тут больше нет) === */
+.hero{ padding: 28px 0 10px; }
+.hero-grid{ display:block; }
+.hero-left{ padding-top: 8px; }
+.hero-title{
+  color:var(--ink); font-weight:800;
+  font-size: clamp(48px, 5vw, 96px);
+  line-height:1.02; letter-spacing:-.02em;
+  position:relative; display:inline-block; margin:0 0 14px;
+}
+.hero-underline{
+  position:absolute; left:46%; top:56%;
+  width:320px; height:16px; transform:translateX(-50%);
+  /* если есть PNG «подчёрк», подставь сюда вместо градиента */
+  background: radial-gradient(ellipse at center, rgba(255,59,48,.9), rgba(255,59,48,0) 70%);
+  filter: blur(1.1px);
+}
+.hero-stamp{
+  position:absolute; left:51.5%; top:38%;
+  transform:translate(-50%,-50%) rotate(-12deg);
+  width:100px; height:100px; border-radius:50%;
+  display:grid; place-items:center;
+  background:var(--accent); color:#fff; font:800 11px/1 "Surf Sans", system-ui;
+  text-transform:uppercase; box-shadow:0 12px 26px rgba(255,59,48,.32);
+}
+.hero-spacer{ display:inline-block; width:.35ch }
+.hero-lead{ max-width:560px; margin-top:12px; color:var(--muted) }
+
+/* === BENEFITS: сетка и карточки (бейдж справа-снизу!) === */
+.benefits__row{
+  display:grid; grid-template-columns:repeat(4, 1fr); gap:18px;
+}
+.card{ background:#fff; border-radius:20px; box-shadow:0 14px 34px rgba(11,39,64,.10) }
+.benefit{
+  border-radius:24px; padding:18px; display:flex; flex-direction:column; min-height:275px;
+  background:#0c2d45; color:#fff;
+}
+.benefit--light{
+  background:#fff; color:var(--ink);
+  border:1px solid #eaf1f7; box-shadow:0 10px 28px rgba(11,39,64,.08);
+}
+.benefit__img{ position:relative; margin-bottom:12px }
+.benefit__img img{
+  width:100%; height:168px; object-fit:cover; border-radius:18px;
+  box-shadow:0 10px 24px rgba(11,39,64,.12);
+}
+.benefit__badge{
+  position:absolute; right:-10px; bottom:-10px;  /* <-- ТУТ! справа-снизу */
+  top:auto;                                     /* обнуляем top */
+  width:44px; height:44px; border-radius:50%;
+  background:var(--accent); color:#fff; font-weight:800;
+  display:grid; place-items:center; box-shadow:0 10px 20px rgba(255,59,48,.35);
+}
+.benefit__title{ margin:8px 0 6px; font-size:18px; font-weight:800; line-height:1.2 }
+.benefit__text{ margin:0; color:#d6e4ef; font-size:14px }
+.benefit--light .benefit__text{ color:#5a7282 }
+
+/* адаптив сетки карточек */
+@media (max-width:1100px){ .benefits__row{ grid-template-columns:1fr 1fr } }
+@media (max-width:560px){  .benefits__row{ grid-template-columns:1fr } }
+
+/* === СЁРФЕР ПОД КАРТОЧКАМИ === */
+.surfer{ padding: 6px 0 24px; background:linear-gradient(#f7fbff, #ffffff); }
+.surfer__wrap{ display:flex; justify-content:flex-end; }
+.surfer__img{
+  width:min(520px, 46vw); height:auto; display:block;
+  border-radius:18px; box-shadow:0 18px 40px rgba(11,39,64,.16);
+}
+
+/* шапка: фон — только через background, доп. img слева оставляем как декоративный */
+.hdr-decor--left{ left:0; top:0; height:140px; transform:translateX(-10%) }
+
+/* контейнер */
+.container{ width:min(1180px,92vw); margin-inline:auto }
+
+
+/* ===== ЕДИНЫЙ ФОН ДЛЯ ШАПКИ + HERO ===== */
+.site-header,
+.hero{
+  background-image:
+    linear-gradient(#f4f8fc 0%, #eef6fb 100%),
+    url("../images/bg-image 1.png"); /* твой верхний фон */
+  background-repeat: no-repeat, no-repeat;
+  background-position: 0 0, 0 0;     /* слева-сверху */
+  background-size: 100% 100%, cover; /* градиент на весь блок, картинка — cover */
+}
+
+/* Протягиваем тот же фон на ВЕРХНЮЮ ПОЛОВИНУ секции с карточками */
+.benefits{ position: relative; padding: 24px 0 56px; }
+.benefits::before{
+  content:"";
+  position:absolute; left:0; top:0; right:0; height:50%;
+  background: url("../images/bg-image 1.png") 0 0 / cover no-repeat;
+  opacity: .9;
+  pointer-events: none;
+  z-index: 0;
+}
+.benefits > .container{ position: relative; z-index: 1; }
+
+/* ===== Адрес — красный рукописный ===== */
+.hero-address{
+  color:#FF3B30 !important;
+  font-family:"Surf Script", cursive;
+  font-weight:700;
+  font-size:20px;
+}
+
+/* ===== Фото сёрфера убрали из hero — оставим правило на всякий случай */
+.hero-right{ display:none; }
+
+/* ===== Карточки: бейдж — картинка в ПРАВОМ НИЖНЕМ углу ===== */
+.benefit__img{ position:relative; margin-bottom:12px }
+.benefit__img img{
+  width:100%; height:168px; object-fit:cover; border-radius:18px;
+  box-shadow:0 10px 24px rgba(11,39,64,.12);
+}
+
+/* заменяем круглую "цифру" на изображение, не меняя HTML */
+.benefit__badge{
+  position:absolute; right:12px; bottom:12px;
+  width:48px; height:48px;
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size:contain;
+  text-indent:-9999px; /* прячем текст "1,2,3,4" */
+  overflow:hidden; border-radius:0; background-color:transparent;
+}
+
+/* подставь сюда ИМЕНА СВОИХ PNG с номерами */
+.benefits__row article:nth-child(1) .benefit__badge{ background-image:url("../images/1.png"); }
+.benefits__row article:nth-child(2) .benefit__badge{ background-image:url("../images/2.png"); }
+.benefits__row article:nth-child(3) .benefit__badge{ background-image:url("../images/3.png"); }
+.benefits__row article:nth-child(4) .benefit__badge{ background-image:url("../images/4.png"); }
+
+/* сетка карточек — оставляю как было, на всякий */
+.benefits__row{
+  display:grid; grid-template-columns:repeat(4,1fr); gap:18px;
+}
+@media (max-width:1100px){ .benefits__row{ grid-template-columns:1fr 1fr } }
+@media (max-width:560px){  .benefits__row{ grid-template-columns:1fr } }
