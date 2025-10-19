@@ -1,121 +1,255 @@
-<html lang = "ru">
+<html lang="ru">
+
 <head>
-    <meta charset = "utf-8" />
-    <meta name = "viewport" content="width=device-width,initial-scale=1" />
-    <title>
-        SurfTrainCo — Серфинг
-    </title>
-    <link rel="stylesheet" href="css/fonts.css">
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/components.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>
+    SurfTrainCo — Серфинг
+  </title>
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
 </head>
 
 <body>
-   <header class="site-header">
-  <div class="hdr-bg"></div>
+  <header class="site-header">
+    <div class="hdr-bg"></div>
 
-  <div class="container hdr-row">
-    <a class="hdr-logo" href="#home">
-      <img src="images/Лого.png" alt="SurfTrainCo">
-    </a>
+    <div class="container hdr-row">
+      <a class="hdr-logo" href="#home">
+        <img src="images/Лого.png" alt="SurfTrainCo">
+      </a>
 
-    <nav class="hdr-nav" aria-label="Главная навигация">
-      <ul>
-        <li class="is-active"><a href="#home">Главная</a></li>
-        <li><a href="#about">О нас</a></li>
-        <li><a href="#awards">Награды</a></li>
-        <li><a href="#tariffs">Тарифы</a></li>
-        <li><a href="#promo">Акции</a></li>
-        <li><a href="#signup">Запись</a></li>
-        <li><a href="#contacts">Контакты</a></li>
-      </ul>
-    </nav>
+      <nav class="hdr-nav" aria-label="Главная навигация">
+        <ul>
+          <li class="is-active"><a href="#home">Главная</a></li>
+          <li><a href="#about">О нас</a></li>
+          <li><a href="#awards">Награды</a></li>
+          <li><a href="#tariffs">Тарифы</a></li>
+          <li><a href="#promo">Акции</a></li>
+          <li><a href="#signup">Запись</a></li>
+          <li><a href="#contacts">Контакты</a></li>
+        </ul>
+      </nav>
 
-    <div class="hdr-cta">
-      <ul class="hdr-socials" aria-label="Соцсети">
-        <li><a href="#"><img src="images/Телеграм.png" alt="tg"></a></li>
-        <li><a href="#"><img src="images/Вайбер.png" alt="wa"></a></li>
-        <li><a href="#"><img src="images/Ватсап.png" alt="vb"></a></li>
-      </ul>
-      <a class="hdr-phone" href="tel:+79106849053">+7 (910) 684-90-53</a>
-      <a class="hdr-btn" href="#more"><span>Подробнее</span><img src="images/Кнопка подробнее.png" alt=""></a>
+      <div class="hdr-cta">
+        <ul class="hdr-socials" aria-label="Соцсети">
+          <li><a href="#"><img src="images/Телеграм.png" alt="tg"></a></li>
+          <li><a href="#"><img src="images/Вайбер.png" alt="wa"></a></li>
+          <li><a href="#"><img src="images/Ватсап.png" alt="vb"></a></li>
+        </ul>
+        <a class="hdr-phone" href="tel:+79106849053">+7 (910) 684-90-53</a>
+        <a class="hdr-btn" href="#more"><span>Подробнее</span><img src="images/Кнопка подробнее.png" alt=""></a>
+      </div>
     </div>
-  </div>
-</header>
+  </header>
 
-<section class="hero">
-  <div class="container hero-grid">
-    <div class="hero-left">
-      <div class="hero-address accent-hand">ул. Черкизова 14, Москва</div>
-
-      <h1 class="hero-title">
-        ПОКОРЯЙТЕ ВОЛНЫ
-        <span class="hero-underline" aria-hidden="true"></span>
-        <span class="hero-stamp" aria-hidden="true">онлайн-запись</span><br>
-        ВМЕСТЕ <span class="hero-spacer"></span> С НАМИ!
-      </h1>
-      <p class="hero-lead">
-        SurfTrainCo предлагает вам доступное, комплексное и приятное обучение серфингу для всех уровней навыков и возрастов.
-      </p>
+  <!-- ======= HERO ======= -->
+  <section class="hero section">
+    <div class="container hero__inner">
+      <div>
+        <p class="note">ул. Черкизова 14, Москва</p>
+        <h1 class="hero__title">Покоряйте <span>волны</span> вместе с нами!</h1>
+        <p class="hero__lead">Сёрф-обучение для взрослых и детей. Индивидуальные и групповые занятия, сертифицированные
+          инструкторы, безопасная экипировка и бодрая морская кардио‑радость.</p>
+        <div style="margin-top:18px;display:flex;gap:12px;flex-wrap:wrap">
+          <a class="btn btn--fill" href="#programs">Выбрать программу</a>
+          <a class="btn" href="#signup">Записаться</a>
+        </div>
+        <div class="features">
+          <!-- 1 -->
+          <div class="card feature card--tight">
+            <img class="feature__thumb" src="img/Картинка 1.jpg" alt="Восстановление" />
+            <div>
+              <div class="feature__title">Про восстановление</div>
+              <div class="feature__note">Мягкие волны и правильная техника</div>
+            </div>
+            <span class="badge">1</span>
+          </div>
+          <!-- 2 -->
+          <div class="card feature card--tight">
+            <img class="feature__thumb" src="img/Картинка 2.jpg" alt="Интенсивность" />
+            <div>
+              <div class="feature__title">Интенсивность</div>
+              <div class="feature__note">План под ваш уровень</div>
+            </div>
+            <span class="badge">2</span>
+          </div>
+          <!-- 3 -->
+          <div class="card feature card--tight">
+            <img class="feature__thumb" src="img/Картинка 3.jpg" alt="Безопасность" />
+            <div>
+              <div class="feature__title">Безопасность</div>
+              <div class="feature__note">Экипировка и брифинг</div>
+            </div>
+            <span class="badge">3</span>
+          </div>
+          <!-- 4 -->
+          <div class="card feature card--tight">
+            <img class="feature__thumb" src="img/Картинка 4.jpg" alt="Дружелюбие" />
+            <div>
+              <div class="feature__title">Дружелюбие</div>
+              <div class="feature__note">Коммьюнити 2000+ человек</div>
+            </div>
+            <span class="badge">4</span>
+          </div>
+        </div>
+      </div>
+      <!-- Поставьте картинку серфера в img/hero-surfer.png, волны — img/hero-waves.png в стиле макета -->
+      <img class="hero__surfer" src="img/Картинка серфера.png" alt="Сёрфер" />
     </div>
-  </div>
-</section>
-<!-- ПРЕИМУЩЕСТВА — 4 карточки -->
-<section class="benefits">
-  <div class="container benefits__row">
-    <!-- 1 -->
-    <article class="benefit card">
-      <div class="benefit__img">
-        <img src="images/Картинка 1.png" alt="">
-        <span class="benefit__badge">1</span>
-      </div>
-      <h3 class="benefit__title">Профессиональное руководство</h3>
-      <p class="benefit__text">
-        Опытные инструкторы помогут вам освоить основы и быстро совершенствоваться.
-      </p>
-    </article>
+  </section>
 
-    <!-- 2 -->
-    <article class="benefit card benefit--light">
-      <div class="benefit__img">
-        <img src="images/Картинка 2.png" alt="">
-        <span class="benefit__badge">2</span>
+  <!-- ======= INTRO ======= -->
+  <section class="section">
+    <div class="container intro">
+      <div class="media">
+        <img class="media__img" src="img/Подложка 1.jpg" alt="SurfTrainCo" />
       </div>
-      <h3 class="benefit__title">Качественное оборудование</h3>
-      <p class="benefit__text">
-        Доски и гидрокостюмы помогут оставаться в безопасности и получать удовольствие.
-      </p>
-    </article>
+      <div>
+        <h2 class="h2">Серфинг <span class="note">это стиль жизни</span></h2>
+        <p>Не бойтесь испытывать себя и свои возможности — поддайтесь волнам: именно они помогут раскрыть ваш истинный
+          потенциал. Погружайтесь в мир сёрфинга и получайте яркие эмоции и воспоминания.</p>
+        <div style="display:flex;gap:12px;margin-top:12px">
+          <a class="btn btn--fill" href="#signup">Записаться</a>
+          <a class="btn" href="#programs">Программы</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- 3 -->
-    <article class="benefit card">
-      <div class="benefit__img">
-        <img src="images/Картинка 3.png" alt="">
-        <span class="benefit__badge">3</span>
+  <!-- ======= AWARDS ======= -->
+  <section id="awards" class="section">
+    <div class="container">
+      <h2 class="h2">Награды <span class="note">нашего клуба</span></h2>
+      <div class="ribbon">
+        <article class="card">
+          <img src="img/Картинка (1).jpg" alt="Лучший инструктор" />
+          <div style="padding:12px 12px 16px">
+            <strong>Лучший инструктор 2022</strong>
+            <div class="feature__note">по версии SurfPro Awards</div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="img/Картинка (2).jpg" alt="Команда" />
+          <div style="padding:12px 12px 16px">
+            <strong>Командный приз</strong>
+            <div class="feature__note">регата «Южный Ветер»</div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="img/img.jpg" alt="Дети" />
+          <div style="padding:12px 12px 16px">
+            <strong>Юниор-лига</strong>
+            <div class="feature__note">поддержка детских стартов</div>
+          </div>
+        </article>
       </div>
-      <h3 class="benefit__title">Благоприятная обстановка</h3>
-      <p class="benefit__text">
-        Доброжелательная и безопасная атмосфера с людьми со схожим опытом и целями.
-      </p>
-    </article>
+    </div>
+  </section>
 
-    <!-- 4 -->
-    <article class="benefit card benefit--light">
-      <div class="benefit__img">
-        <img src="images/Картинка 4.png" alt="">
-        <span class="benefit__badge">4</span>
+  <!-- ======= PROGRAMS ======= -->
+  <section id="programs" class="section">
+    <div class="container">
+      <h2 class="h2">Программы <span class="note">обучения</span></h2>
+      <div class="pricing">
+        <article class="card price">
+          <img src="img/Иконка (4).jpg" alt="Easy Start"
+            style="border-top-left-radius:var(--radius);border-top-right-radius:var(--radius)">
+          <div style="padding:16px">
+            <div class="price__title">Easy Start</div>
+            <ul class="price__list">
+              <li>2 групповых занятия</li>
+              <li>Гидрокостюм и доска</li>
+              <li>Фото сессии с берега</li>
+            </ul>
+            <div class="strike">14 990 руб.</div>
+            <div class="big">12 990 руб.</div>
+            <a class="btn btn--fill" href="#signup" style="margin-top:10px">Выбрать тариф</a>
+          </div>
+        </article>
+
+
+        <article class="card price">
+          <img src="img/Иконка (9).jpg" alt="Flow Rider"
+            style="border-top-left-radius:var(--radius);border-top-right-radius:var(--radius)">
+          <div style="padding:16px">
+            <div class="price__title">Flow Rider</div>
+            <ul class="price__list">
+              <li>4 персональных занятия</li>
+              <li>Аналитика техники</li>
+              <li>Видео разбор</li>
+            </ul>
+            <div class="strike">12 990 руб.</div>
+            <div class="big">10 990 руб.</div>
+            <a class="btn btn--fill" href="#signup" style="margin-top:10px">Выбрать тариф</a>
+          </div>
+        </article>
       </div>
-      <h3 class="benefit__title">Дополнительные услуги</h3>
-      <p class="benefit__text">
-        Фото/видео, аренда, выездные мероприятия и праздничные программы.
-      </p>
-    </article>
-  </div>
-</section>
-<section>   
-  <div class="container surfer_wrap">
-      <img class="surfer_img" src="images/Картинка серфера.png" alt="Сёрфер с доской">
-  </div>
-</section>
+    </div>
+  </section>
+
+  <!-- ======= SALES ======= -->
+  <section id="sales" class="section">
+    <div class="container">
+      <h2 class="h2">Акции <span class="note">и скидки</span></h2>
+      <div class="gallery">
+        <a class="card media" href="#">
+          <img class="media__img" src="img/card (1).jpg" alt="-15% на первую тренировку">
+        </a>
+        <a class="card media" href="#">
+          <img class="media__img" src="img/card (2).jpg" alt="Сертификаты">
+        </a>
+        <a class="card media" href="#">
+          <img class="media__img" src="img/card.jpg" alt="Семейный день">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= SIGNUP ======= -->
+  <section id="signup" class="section">
+    <div class="container">
+      <h2 class="h2">Запись <span class="note">на занятие</span></h2>
+      <form class="form card" onsubmit="event.preventDefault();alert('Заявка отправлена! Мы свяжемся с вами.');">
+        <div style="padding:16px;display:grid;gap:18px">
+          <div style="display:grid;gap:18px;grid-template-columns:1fr 1fr">
+            <input class="input" required placeholder="Ваше имя" />
+            <input class="input" required type="tel" placeholder="Телефон" />
+          </div>
+          <select class="select" required>
+            <option value="" selected disabled>Выберите программу</option>
+            <option>Easy Start</option>
+            <option>Flow Rider</option>
+          </select>
+          <textarea placeholder="Комментарий"></textarea>
+          <div style="display:flex;gap:12px;flex-wrap:wrap">
+            <button class="btn btn--fill" type="submit">Отправить заявку</button>
+            <span class="feature__note">Нажимая на кнопку, вы соглашаетесь с политикой обработки данных.</span>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ======= MAP ======= -->
+  <section class="section">
+    <div class="container">
+      <h2 class="h2">Мы на карте <span class="note">где искать?</span></h2>
+      <div class="map card">
+        <!-- Замените на скрин Google Maps вашего адреса: img/map.jpg -->
+        <img class="map__img" src="img/map.jpg" alt="Карта" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= FOOTER ======= -->
+  <footer class="footer container">
+    <div style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap">
+      <div>© 2025 SurfTrainCo. Ветер в паруса и немного соли на губах.</div>
+      <div>inst • tg • vk</div>
+    </div>
+  </footer>
+
 </body>
 </html>
