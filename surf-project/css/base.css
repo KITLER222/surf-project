@@ -17,7 +17,8 @@ html,body{margin:0}
 }
 .hdr-bg{
   position:absolute; inset:0; z-index:-2;
-  background:url("../images/bg-image 1.png") right top/cover no-repeat;
+  background:linear-gradient(#eef6fb, #f7fbff) right top/cover no-repeat;
+  /*background:url("../images/bg-image 1.png") right top/cover no-repeat;*/
   opacity:.5;
 }
 .hdr-decor{ position:absolute; z-index:-1; pointer-events:none; user-select:none }
@@ -75,7 +76,13 @@ html,body{margin:0}
 }
 
 /* ===== HERO ===== */
-.hero{ background:linear-gradient(#eef6fb, #f7fbff); padding:28px 0 10px }
+.hero{ 
+  background:linear-gradient(#eef6fb, #f7fbff); padding:28px 0 10px;
+  background-image:url('../images/bg-image 1.png');
+  background-repeat: no-repeat, no-repeat;
+  background-position: 0 0, 0 0;
+  background-size: 100% 100%, cover;
+}
 .hero-grid{ display:block; }
 .hero-left{ padding-top:8px }
 .hero-title{
@@ -119,7 +126,7 @@ html,body{margin:0}
 .note{font-family:Pacifico,cursive;color:var(--brand);font-size:22px}
 
 /* ======= Награды ======= */
-.ribbon{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(280px,1fr);gap:18px;overflow-x:auto;padding-bottom:6px;scroll-snap-type:x mandatory}
+.ribbon{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(700px,1fr);gap:18px;overflow-x:auto;padding-bottom:6px;scroll-snap-type:x mandatory}
 .ribbon>.card{scroll-snap-align:start}
 
 /* ======= Программы ======= */
@@ -164,23 +171,4 @@ textarea{height:120px;padding:12px;resize:vertical}
   .hero::before{height:58%}
   .hero__inner{min-height:unset}
   .gallery{grid-template-columns:1fr}
-}
-
-/* ===== ЕДИНЫЙ ФОН ДЛЯ ШАПКИ + HERO ===== */
-.site-header,
-.hero{
-  background-image:
-    linear-gradient(#f4f8fc 0%, #eef6fb 100%),
-    url("../images/bg-image 1.png");
-  background-repeat: no-repeat, no-repeat;
-  background-position: 0 0, 0 0;
-  background-size: 100% 100%, cover;
-}
-
-/* адрес — красный рукописный */
-.hero-address{
-  color:#FF3B30 !important;
-  font-family: cursive;
-  font-weight:700;
-  font-size:20px;
 }
