@@ -1,0 +1,38 @@
+/* ====== Базовые стили и переменные ====== */
+:root{
+  --bg:#0b1020;
+  --surface:#0f1630;
+  --muted:#a9b0c0;
+  --text:#eef2ff;
+  --accent:#7dd3fc;
+  --accent-2:#a78bfa;
+  --container: 1120px;
+  --radius: 16px;
+  --shadow: 0 10px 30px rgba(0,0,0,.3);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Noto Sans', 'Helvetica Neue', Arial, 'Apple Color Emoji','Segoe UI Emoji';
+  color:var(--text);
+  background: radial-gradient(1200px 600px at 80% -10%, rgba(167,139,250,.15), transparent 50%) , var(--bg);
+}
+
+/* ====== Утилиты ====== */
+.container{max-width:var(--container); margin:0 auto; padding:0 16px}
+.section{padding:64px 0}
+.section--alt{background:linear-gradient(180deg, rgba(125,211,252,.07), rgba(167,139,250,.07))}
+.section__lead{color:var(--muted); margin-top:-8px}
+
+/* ====== Шапка ====== */
+.site-header{position:sticky; top:0; z-index:10; backdrop-filter:saturate(120%) blur(8px); background:rgba(11,16,32,.6); border-bottom:1px solid rgba(255,255,255,.06)}
+.hdr{display:flex; align-items:center; justify-content:space-between; height:64px}
+.logo{display:flex; align-items:center; gap:10px; text-decoration:none; color:var(--text); font-weight:700}
+.logo__text{letter-spacing:.3px}
+.nav__list{display:flex; gap:20px; list-style:none; margin:0; padding:0}
+.nav__list a{color:var(--muted); text-decoration:none; padding:8px 12px; border-radius:10px}
+.nav__list a:is(:hover,:focus){color:var(--text); background:rgba(255,255,255,.06)}
+.nav__list .is-active{color:var(--text)}
+.nav__toggle{display:none; background:transparent; color:var(--text); border:1px solid rgba(255,255,255,.2); padding:6px 10px; border-radius:10px}

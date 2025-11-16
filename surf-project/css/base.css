@@ -3,6 +3,7 @@
   --muted:#2e4a5b;
   --ring:#d7e6f2;
   --accent:#FF3B30;
+  --brand:#FF3B30;
 }
 
 /* базовые */
@@ -18,7 +19,6 @@ html,body{margin:0}
 .hdr-bg{
   position:absolute; inset:0; z-index:-2;
   background:linear-gradient(#eef6fb, #f7fbff) right top/cover no-repeat;
-  /*background:url("../images/bg-image 1.png") right top/cover no-repeat;*/
   opacity:.5;
 }
 .hdr-decor{ position:absolute; z-index:-1; pointer-events:none; user-select:none }
@@ -120,12 +120,76 @@ html,body{margin:0}
 .feature .badge{position:absolute;right:10px;top:-10px}
 
 /* ======= Серфинг (интро) ======= */
-.intro{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center}
+/*.intro{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center}
 .media{position:relative;border-radius:var(--radius-xl);overflow:hidden;box-shadow:var(--shadow)}
 .media__img{aspect-ratio:16/10;object-fit:cover}
-.note{font-family:Pacifico,cursive;color:var(--brand);font-size:22px}
+.note{font-family:Pacifico,cursive;color:var(--brand);font-size:22px}*/
 
-.text-block{
+.about{
+  display:grid;
+  grid-template-columns: 1.3fr 0.7fr;  
+  column-gap:24px;  
+  align-items:start;                   
+}
+
+/* Фото слева */
+.about__media{
+  margin:0;
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 14px 34px rgba(11,39,64,.10);
+}
+.about__img{
+  width:100%;
+  height:auto;                         
+  display:block;
+  object-fit:cover;
+}
+
+.about__right{
+  display:grid;
+  row-gap:6px;       
+  align-content:start;
+}
+
+/* Синяя панель справа */
+.about__panel{
+  background:#0c2d45;
+  color:#fff;
+  border-radius:18px;
+  padding:20px 22px;
+  box-shadow:0 12px 30px rgba(11,39,64,.18);
+  align-self:start;                    /* к верхнему краю */
+  grid-column:2;                       /* правая колонка */
+  grid-row:1;                          /* первая строка */
+}
+
+/* Белая мини-карточка под синей панелью */
+.about__stats{
+  grid-column:2;                       /* та же правая колонка */
+  grid-row:2;                          /* ВАЖНО: строка под панелью */
+  justify-self:stretch;                   
+  background:#fff;
+  color:#0B2740;
+  border-radius:14px;
+  padding:10px 12px;
+  display:flex; align-items:center; gap:10px;
+  /*width:fit-content;*/
+  box-shadow:0 8px 20px rgba(11,39,64,.15);
+  margin-top:0px;                      
+}
+
+.about__avatars{ display:flex; align-items:center }
+.about__avatar{
+  width:32px; height:32px; border-radius:50%;
+  object-fit:cover; display:block;
+  border:2px solid #fff;
+  margin-left:-8px;
+}
+.about__avatar:first-child{ margin-left:0 }
+.about__count{ font-weight:800; white-space:nowrap }
+
+/*.text-block{
   background:#809fe0;
   border:1px solid #eaf1f7;
   border-radius:20px;
@@ -139,10 +203,48 @@ html,body{margin:0}
   font-weight:800;
   font-size:20px;
 }
-.text-block p{ margin:0 }
+.text-block p{ margin:0 }*/
+
+/* Абзац в интро справа от фото */
+.about__text{
+  color:#113C5A;         
+  font-size:18px;       
+  line-height:1.55;      
+  font-weight:600;        
+  max-width: 680px;      
+  margin: 10px 0 0;
+}
+@media (min-width: 1100px){
+  .about__text{ font-size:20px; }
+}
+
+/* Волнистое оранжевое подчёркивание у части фразы */
+.about__text-underline{
+  position:relative;
+}
+.about__text-underline::after{
+  content:"";
+  position:absolute;
+  left:0; right:0; bottom:-4px; height:8px;
+  background:
+    url("data:image/svg+xml;utf8,\
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 8' preserveAspectRatio='none'>\
+<path d='M0,6 C8,2 16,10 24,6 S40,2 48,6' fill='none' stroke='%23FF3B30' stroke-width='2' stroke-linecap='round'/>\
+</svg>") 0 100%/48px 8px repeat-x;  /* оранжевые «волны» */
+  pointer-events:none;
+}
 
 /* ======= Награды ======= */
-.ribbon{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(700px,1fr);gap:18px;overflow-x:auto;padding-bottom:6px;scroll-snap-type:x mandatory}
+.ribbon
+{
+  display:grid;
+  grid-auto-flow:column;
+  grid-auto-columns:minmax(700px,1fr);
+  gap:18px;
+  overflow-x:auto;
+  padding-bottom:6px;
+  scroll-snap-type:x mandatory
+}
 .ribbon>.card{scroll-snap-align:start}
 
 /* ======= Программы ======= */
@@ -157,29 +259,101 @@ html,body{margin:0}
 .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .gallery .media__img{aspect-ratio:1.2/1}
 
-/* ======= Форма ======= */
-.form{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.input, .select, textarea{width:100%;border:2px solid #D3E6F4;background:#fff;border-radius:12px;height:44px;padding:0 12px;font:inherit}
-textarea{height:120px;padding:12px;resize:vertical}
+/* ===== SIGNUP (карточка с формой и фото) ===== */
+.signup{
+  display:grid;
+  grid-template-columns: 1fr 0.95fr;      /* слева шире */
+  gap:18px;
+  background:#fff;
+  border:1px solid #eaf1f7;
+  border-radius:20px;
+  box-shadow:0 10px 28px rgba(11,39,64,.08);
+  padding:16px;
+}
+
+/* сетки внутри формы */
+.signup__form{ display:grid; gap:12px; }
+.signup__row{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+.signup__actions{ display:flex; align-items:center; gap:12px; flex-wrap:wrap; }
+.signup__actions .btn--fill{ height:46px; padding:0 24px; border-radius:999px; }
+
+/* единый вид для инпутов/селектов/textarea */
+.input, .select, .input--area{
+  appearance:none; -webkit-appearance:none; -moz-appearance:none;
+  width:100%;
+  height:46px;
+  border:2px solid #D3E6F4;
+  background:#fff;
+  border-radius:12px;
+  padding:0 12px;
+  font:inherit; color:inherit;
+  outline:none;
+  transition:border-color .15s ease;
+}
+.input:focus, .select:focus, .input--area:focus{ border-color:#9cc6e6; }
+
+/* селект со стрелкой */
+.select{
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path fill='%2390AFC6' d='M6 8L0 0h12z'/></svg>");
+  background-repeat:no-repeat;
+  background-position:right 12px center;
+  padding-right:34px;
+}
+
+/* превью справа (≈700×422) */
+.signup__preview{
+  margin:0;
+  border-radius:16px;
+  overflow:hidden;
+  border:1px solid #eaf1f7;
+  background:#f6fbff;
+  display:flex; 
+  align-items:center; 
+  justify-content:center;
+}
+.signup__preview img{
+  width:100%;
+  height:422px;         
+  object-fit:cover;
+  display:block;
+  border-radius:16px;
+}
 
 /* ======= Карта ======= */
-.map{border-radius:var(--radius-xl);overflow:hidden;box-shadow:var(--shadow)}
+.map
+{
+  border-radius:var(--radius-xl);
+  overflow:hidden;
+  box-shadow:var(--shadow)
+}
 .map__img
 {
   width:100%;
   height: clamp(340px, 48vw, 640px);
-  aspect-ratio:16/7;
   object-fit:cover;
   filter:grayscale(.1) contrast(1.05)
-  
 }
 
 /* ======= Футер ======= */
-.footer{padding:32px 0 56px;color:#88A0B7;font-size:14px}
+.footer
+{
+  padding:32px 0 56px;
+  color:#88A0B7;
+  font-size:14px
+}
 
 /* ======= Заголовки ======= */
-.h2{font-size:32px;font-weight:800;margin:0 0 16px}
-.h2 .note{margin-left:8px;font-size:20px}
+.h2
+{
+  font-size:32px;
+  font-weight:800;
+  margin:0 0 16px
+}
+.h2 .note
+{
+  margin-left:8px;
+  font-size:20px
+}
 
 /* ======= Адаптив ======= */
 @media (max-width:1000px){
@@ -195,4 +369,44 @@ textarea{height:120px;padding:12px;resize:vertical}
   .hero::before{height:58%}
   .hero__inner{min-height:unset}
   .gallery{grid-template-columns:1fr}
+}
+
+/* базовая кнопка */
+.btn{
+  display:inline-flex; align-items:center; justify-content:center;
+  height:44px; padding:0 24px;
+  border-radius:999px;
+  font-weight:800; text-decoration:none;
+  border:2px solid var(--brand);
+  color:var(--brand);
+  background:#fff;
+  transition:.2s ease-in-out;
+}
+
+/* оранжевая заливка */
+.btn--fill{
+  color:#fff;
+  border-color:var(--brand);
+  background:linear-gradient(180deg, #FF6A3A 0%, var(--brand) 100%);
+  box-shadow:0 10px 22px rgba(255,59,48,.28);
+}
+
+/* ховеры/нажатие для красоты */
+.btn:hover{ transform:translateY(-1px) }
+.btn--fill:hover{ box-shadow:0 12px 26px rgba(255,59,48,.34) }
+.btn:active{ transform:translateY(0) }
+
+.note{
+  color:var(--brand);
+  font-family: Pacifico, cursive;
+  font-size:22px;
+}
+
+.hero .note{ color:var(--brand) !important; }
+
+/* акцент в заголовках: оранжевый + курсив */
+.hero__title .accent{
+  color:var(--brand);
+  font-style: italic;              /* курсив */
+  font-family: Pacifico, cursive;  
 }

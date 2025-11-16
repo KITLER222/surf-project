@@ -98,39 +98,49 @@
     </div>
   </section>
 
-  <!-- ======= INTRO ======= -->
-  <section class="section" id="about">
-    <div class="container about about--blue">
-      <div class="about_panel">
-      <h2 class="h2">Серфинг <span class="note">это стиль жизни</span></h2>
-      <div class="about_media">
-        <img class="about__img" src="images/Картинка серфера.png" alt="Сёрфер" />
-      </div>
-      <div>
-        <h3>
-          SurfTrainCo —
-        </h3>
-        <p>
-          это компания по обучению серфингу, расположенная в Москве, которая открылась в 2018 году.
-          Ее миссия состоит в том, чтобы обеспечить доступное, всестороннее и приятное обучение серфингу для всех уровней навыков и возрастов.
-        </p>
-        <div style="display:flex;gap:12px;margin-top:12px">
-          <a class="btn btn--fill" href="#signup">Записаться</a>
-          <a class="btn" href="#programs">Программы</a>
+  <!-- ======= ABOUT (сёрфер слева, текст справа) ======= -->
+<section class="section" id="about">
+  <div class="container">
+    <h2 class="h2">Серфинг <span class="note">это стиль жизни</span></h2>
+
+    <div class="about">
+      <!-- ЛЕВАЯ КОЛОНКА -->
+      <figure class="about__media">
+        <img class="about__img" src="images/Блок с фото.png" alt="Сёрфер">
+      </figure>
+
+      <!-- ПРАВАЯ КОЛОНКА -->
+       <div class="adout_right">
+      <aside class="about__panel">
+        <div class="about__title">SurfTrainCo —</div>
+        <p>это компания по обучению сёрфингу, расположенная в Москве, которая открылась в 2018 году.</p>
+        <p>Её миссия состоит в том, чтобы обеспечить доступное, всестороннее и приятное обучение сёрфингу для всех уровней навыков и возрастов.</p>
+
+       
+      </aside> 
+      <div class="about__stats">
+          <div class="about__avatars">
+            <img class="about__avatar" src="images/Аватар 1.png" alt="">
+            <img class="about__avatar" src="images/Аватар 2.png" alt="">
+            <img class="about__avatar" src="images/Аватар 3.png" alt="">
+          </div>
+          <span class="about__pill"><b>2000+</b>&nbsp;учеников</span>
         </div>
-      </div>
-      </div>
+        </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <section class="section">
     <div class="container intro">
       <div>
-        <p>
-          Не бойтесь испытать себя и свои возможности - поддайтесь волнам и пусть они помогут вам раскрыть свой истинный потенциал. 
-          Погрузитесь в мир серфинга и почувствуйте, как ваша жизнь наполняется яркими эмоциями и волнующими приключениями. Погнали волну!
+       <p class="about__text">
+        Не бойтесь испытывать себя и свои возможности — поддайтесь волнам и пусть они помогут вам раскрыть свой истинный потенциал.
+          <span class="about__text-underline">
+            Погрузитесь в мир сёрфинга и почувствуйте, как ваша жизнь наполняется яркими эмоциями и волнующими приключениями.
+          </span>
+             Погнали волну!
         </p>
-        <div style="display:flex;gap:12px;margin-top:12px">
         </div>
       </div>
     </div>
@@ -239,30 +249,53 @@
     </div>
   </section>
 
-  <!-- ======= SIGNUP ======= -->
-  <section id="signup" class="section">
-    <div class="container">
-      <h2 class="h2">Запись <span class="note">на занятие</span></h2>
-      <form class="form card" onsubmit="event.preventDefault();alert('Заявка отправлена! Мы свяжемся с вами.');">
-        <div style="padding:16px;display:grid;gap:18px">
-          <div style="display:grid;gap:18px;grid-template-columns:1fr 1fr">
-            <input class="input" required placeholder="Ваше имя" />
-            <input class="input" required type="tel" placeholder="Телефон" />
-          </div>
+<section id="signup" class="section">
+  <div class="container">
+    <h2 class="h2">Запись <span class="note">на занятие</span></h2>
+
+    <div class="signup">
+      <!-- ЛЕВАЯ КОЛОНКА: форма -->
+      <form class="signup__form" onsubmit="event.preventDefault();alert('Заявка отправлена!');">
+      
+          <div class="signup__row">
+            <select class="select" required>
+            <option value="" selected disabled>Выберите дату</option>
+            <option>21.07</option>
+            <option>28.07</option>
+          </select>
+          <select class="select" required>
+            <option value="" selected disabled>Выберите время</option>
+            <option>10:00</option>
+            <option>14:00</option>
+          </select>
+        </div>
+
+        <div class="signup__row">
           <select class="select" required>
             <option value="" selected disabled>Выберите программу</option>
             <option>Easy Start</option>
             <option>Flow Rider</option>
           </select>
-          <textarea placeholder="Комментарий"></textarea>
-          <div style="display:flex;gap:12px;flex-wrap:wrap">
-            <button class="btn btn--fill" type="submit">Отправить заявку</button>
-            <span class="feature__note">Нажимая на кнопку, вы соглашаетесь с политикой обработки данных.</span>
           </div>
+
+          <div class="signup__row">
+          <input class="input" placeholder="Ваше имя" required>
+          <input class="input" type="tel" placeholder="Телефон" required>
+        </div>
+
+        <div class="signup__actions">
+          <button class="btn btn--fill" type="submit">Записаться онлайн</button>
+          <span class="feature__note">Нажимая на кнопку, вы соглашаетесь с политикой обработки данных.</span>
         </div>
       </form>
+
+      <!-- ПРАВАЯ КОЛОНКА: превью -->
+      <figure class="signup__preview">
+        <img src="images/img.png" alt="Сёрфер">
+      </figure>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- ======= MAP ======= -->
   <section class="section">
