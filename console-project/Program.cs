@@ -1,8 +1,10 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+namespace consoleproject;
+
 
 
     internal class Program
@@ -13,12 +15,13 @@ using System.Threading.Tasks;
             string b = Console.ReadLine();
 
             Console.WriteLine("Введите год мишины: ");
-            int y = Int.Parse(Console.ReadLine());
+            int y = int.Parse(Console.ReadLine());
 
-            Сar car1 = new Car();
+            Car car1 = new Car();
             Car car2 = new Car(b, y);
 
             car1.Print();
             car2.Print();
         }
     }
+

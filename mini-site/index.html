@@ -1,51 +1,29 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <!-- Кодировка и адаптив -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- Заголовок и сниппет -->
-  <title>SunnyTravel — горящие направления на выходные</title>
-  <meta name="description" content="Подберём маршрут, поможем с билетами и подскажем лучшие места. Всё в одном месте — без стресса.">
-
-  <!-- Иконки -->
-  <link rel="icon" href="images/favicon.jpg" type="image/jpg+xml">
-  <!-- <link rel="icon" href="images/favicon-32.png" sizes="32x32"> -->
-  <!-- <link rel="apple-touch-icon" href="images/apple-touch-icon.png" sizes="180x180"> -->
-  <meta name="theme-color" content="#0b1020">
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="SunnyTravel — горящие направления на выходные">
-  <meta property="og:description" content="Подберём маршрут, билеты и лучшие места без стресса.">
-  <meta property="og:image" content="https://example.com/og/cover.jpg">
-  <meta property="og:url" content="https://example.com/">
-  <meta property="og:type" content="website">
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="SunnyTravel — горящие направления на выходные">
-  <meta name="twitter:description" content="Подберём маршрут, билеты и лучшие места без стресса.">
-  <meta name="twitter:image" content="https://example.com/og/cover.jpg">
-
-  <!-- (Опционально) Канонический URL -->
-  <!-- <link rel="canonical" href="https://example.com/"> -->
-
-  <!-- Стили -->
+  <title>SunnyTravel — мини-сайт</title>
+  <meta name="description" content="Мини-сайт SunnyTravel: вдохновляющие направления, преимущества и контакты. Учебный проект.">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
- <!-- Шапка сайта -->
+  <!-- Skip-link: быстрый переход к основному контенту с клавиатуры -->
+  <a class="skip" href="#main">Пропустить к контенту</a>
+
+  <!-- Шапка сайта -->
   <header class="site-header" id="home">
     <div class="container hdr">
       <a class="logo" href="#home" aria-label="SunnyTravel на главную">
-        <img src="images/logo.jpg" width="40" height="40" alt="Логотип SunnyTravel">
+        <img src="images/logo.svg" width="40" height="40" alt="Логотип SunnyTravel">
         <span class="logo__text">SunnyTravel</span>
       </a>
+
       <nav class="nav" aria-label="Главная навигация">
-        <button class="nav__toggle" aria-expanded="false" aria-controls="nav-list">Меню</button>
-        <ul id="nav-list" class="nav__list">
-          <li><a href="#home" class="is-active">Главная</a></li>
+        <button class="nav__toggle" aria-expanded="false" aria-controls="nav-list" aria-label="Открыть меню">Меню</button>
+        <ul id="nav-list" class="nav__list" role="list">
+          <li><a href="#home" aria-current="page">Главная</a></li>
           <li><a href="#destinations">Направления</a></li>
           <li><a href="#benefits">Преимущества</a></li>
           <li><a href="#contacts">Контакты</a></li>
@@ -53,5 +31,145 @@
       </nav>
     </div>
   </header>
+
+  <!-- Hero -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="container hero__grid">
+      <div class="hero__text">
+        <h1 id="hero-title">Путешествуй легко и красиво</h1>
+        <p>Подберём маршрут, поможем с билетами и подскажем лучшие места. Всё в одном месте — без стресса.</p>
+        <a class="btn" href="#destinations">Смотреть направления</a>
+      </div>
+      <div class="hero__art" aria-hidden="true">
+        <img src="images/hero.svg" alt="" width="520" height="360">
+      </div>
+    </div>
+    <div class="hero__bg" aria-hidden="true"></div>
+  </section>
+
+  <!-- Основной контент для skip-link -->
+  <main id="main">
+    <!-- Направления -->
+    <section class="section" id="destinations" aria-labelledby="destinations-title">
+      <div class="container">
+        <h2 id="destinations-title">Горящие направления</h2>
+        <p class="section__lead">Три идеи на ближайшие выходные. Карточки — адаптивные, с красивыми ховерами.</p>
+
+        <div class="cards">
+          <article class="card">
+            <img class="card__img" src="images/card-1.svg" alt="Море и пляж" width="400" height="260">
+            <div class="card__body">
+              <h3 class="card__title">Лазурный берег</h3>
+              <p class="card__text">Солнце, тёплая вода и длинная набережная для прогулок на закате.</p>
+              <a class="card__link" href="#" aria-label="Подробнее о направлении Лазурный берег">Подробнее</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <img class="card__img" src="images/card-2.svg" alt="Горы и походы" width="400" height="260">
+            <div class="card__body">
+              <h3 class="card__title">Высокие горы</h3>
+              <p class="card__text">Маршруты разной сложности, смотровые площадки и кристальный воздух.</p>
+              <a class="card__link" href="#" aria-label="Подробнее о направлении Высокие горы">Подробнее</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <img class="card__img" src="images/card-3.svg" alt="Город и музеи" width="400" height="260">
+            <div class="card__body">
+              <h3 class="card__title">Город музеев</h3>
+              <p class="card__text">Галереи, уютные кофейни и ночные прогулки по огням набережной.</p>
+              <a class="card__link" href="#" aria-label="Подробнее о направлении Город музеев">Подробнее</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Преимущества -->
+    <section class="section section--alt" id="benefits" aria-labelledby="benefits-title">
+      <div class="container">
+        <h2 id="benefits-title">Почему с нами удобно</h2>
+        <ul class="benefits" role="list">
+          <li class="benefit">
+            <img src="images/icon-support.svg" alt="" width="28" height="28" aria-hidden="true">
+            <div><strong>Поддержка 24/7</strong><br> Мы на связи в мессенджерах и по email.</div>
+          </li>
+          <li class="benefit">
+            <img src="images/icon-ticket.svg" alt="" width="28" height="28" aria-hidden="true">
+            <div><strong>Билеты без наценки</strong><br> Сравнение цен и прозрачные условия.</div>
+          </li>
+          <li class="benefit">
+            <img src="images/icon-map.svg" alt="" width="28" height="28" aria-hidden="true">
+            <div><strong>Живые маршруты</strong><br> Подбираем под ваш темп и бюджет.</div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Контакты -->
+    <section class="section" id="contacts" aria-labelledby="contacts-title">
+      <div class="container">
+        <h2 id="contacts-title">Контакты</h2>
+        <address class="contact">
+          <p>Пишите нам: <a href="mailto:hello@sunnytravel.example">hello@sunnytravel.example</a></p>
+          <p>Офис: ул. Примерная, 10</p>
+        </address>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> SunnyTravel. Учебный мини-сайт.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Кнопка "гамбургер" + раскрытие/закрытие меню (ARIA синхронизация)
+    const btn = document.querySelector('.nav__toggle');
+    const list = document.getElementById('nav-list');
+
+    function setMenu(open) {
+      btn.setAttribute('aria-expanded', String(open));
+      list.classList.toggle('is-open', open);
+    }
+
+    if (btn && list) {
+      btn.addEventListener('click', () => {
+        const open = btn.getAttribute('aria-expanded') === 'true';
+        setMenu(!open);
+      });
+
+      // Закрытие по Esc + возврат фокуса на кнопку
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && btn.getAttribute('aria-expanded') === 'true') {
+          setMenu(false);
+          btn.focus();
+        }
+      });
+
+      // Закрытие при клике по пункту меню (на мобильном)
+      list.addEventListener('click', (e) => {
+        const a = e.target.closest('a');
+        if (!a) return;
+        setMenu(false);
+      });
+    }
+
+    // Выставляем aria-current активной ссылке (по хешу)
+    function updateAriaCurrent() {
+      const hash = window.location.hash || '#home';
+      document.querySelectorAll('.nav__list a').forEach(a => {
+        a.removeAttribute('aria-current');
+        if (a.getAttribute('href') === hash) a.setAttribute('aria-current', 'page');
+      });
+    }
+    updateAriaCurrent();
+    window.addEventListener('hashchange', updateAriaCurrent);
+
+    // Текущий год в подвале
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>

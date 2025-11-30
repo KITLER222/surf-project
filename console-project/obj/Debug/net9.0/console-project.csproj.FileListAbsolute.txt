@@ -1,0 +1,15 @@
+c:\Users\Антонина\Documents\vs code projects\console-project\obj\Debug\net9.0\console-project.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\Антонина\Documents\vs code projects\console-project\obj\Debug\net9.0\console-project.AssemblyInfoInputs.cache
+c:\Users\Антонина\Documents\vs code projects\console-project\obj\Debug\net9.0\console-project.AssemblyInfo.cs
+c:\Users\Антонина\Documents\vs code projects\console-project\obj\Debug\net9.0\console-project.csproj.CoreCompileInputs.cache
+c:\Users\Антонина\Documents\vs code projects\console-project\obj\Debug\net9.0\console-project.sourcelink.json
+c:\Users\Антонина\Documents\vs code projects\console-project\bin\Debug\net9.0\console-project.exe
+c:\Users\Антонина\Documents\vs code projects\console-project\bin\Debug\net9.0\console-project.deps.json
+c:\Users\Антонина\Documents\vs code projects\console-project\bin\Debug\net9.0\console-project.runtimeconfig.json
+c:\Users\Антонина\Documents\vs code projects\console-project\bin\Debug\net9.0\console-project.dll
+c:\Users\Антонина\Documents\vs code projects\console-project\bin\Debug\net9.0\console-project.pdb
+c:\Users\Антонина\Documents\vs code projects\console-project\obj\Debug\net9.0\console-project.dll
+c:\Users\Антонина\Documents\vs code projects\console-project\obj\Debug\net9.0\refint\console-project.dll
+c:\Users\Антонина\Documents\vs code projects\console-project\obj\Debug\net9.0\console-project.pdb
+c:\Users\Антонина\Documents\vs code projects\console-project\obj\Debug\net9.0\console-project.genruntimeconfig.cache
+c:\Users\Антонина\Documents\vs code projects\console-project\obj\Debug\net9.0\ref\console-project.dll
