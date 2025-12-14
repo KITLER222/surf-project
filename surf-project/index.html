@@ -1,73 +1,72 @@
-<html lang="ru">
+<html lang="ru"> <!-- Указываем язык страницы для браузеров и SEO -->
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+<head> <!-- Голова документа: метаданные, заголовок, подключения -->
+  <meta charset="utf-8" /> <!-- Кодировка UTF-8 (русский и др. символы) -->
+  <meta name="viewport" content="width=device-width,initial-scale=1" /> <!-- Масштабирование на мобильных -->
   <title>
     SurfTrainCo — Серфинг
-  </title>
-  <link rel="stylesheet" href="css/fonts.css">
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/components.css">
+  </title> <!-- Текст во вкладке браузера -->
+  <link rel="stylesheet" href="css/fonts.css"> <!-- Подключение пользовательских шрифтов -->
+  <link rel="stylesheet" href="css/base.css"> <!-- Основные стили проекта -->
+  <link rel="stylesheet" href="css/components.css"> <!-- Стили компонентов/блоков -->
 </head>
 
-<body>
-  <header class="site-header">
-    <div class="hdr-bg"></div>
+<body> <!-- Тело страницы: всё, что видно пользователю -->
+  <header class="site-header"> <!-- Шапка сайта -->
+    <div class="hdr-bg"></div> <!-- Фоновый декоративный слой шапки (подложка) -->
 
-    <div class="container hdr-row">
-      <a class="hdr-logo" href="#home">
-        <img src="images/Лого.png" alt="SurfTrainCo">
+    <div class="container hdr-row"> <!-- Контейнер ограничения ширины + строка шапки -->
+      <a class="hdr-logo" href="#home"> <!-- Логотип — ссылка на начало страницы -->
+        <img src="images/Лого.png" alt="SurfTrainCo"> <!-- Картинка логотипа с alt-текстом -->
       </a>
 
-      <nav class="hdr-nav" aria-label="Главная навигация">
-        <ul>
-          <li class="is-active"><a href="#home">Главная</a></li>
-          <li><a href="#about">О нас</a></li>
-          <li><a href="#awards">Награды</a></li>
-          <li><a href="#tariffs">Тарифы</a></li>
-          <li><a href="#promo">Акции</a></li>
-          <li><a href="#signup">Запись</a></li>
-          <li><a href="#contacts">Контакты</a></li>
+      <nav class="hdr-nav" aria-label="Главная навигация"> <!-- Основное меню сайта -->
+        <ul> <!-- Список пунктов навигации -->
+          <li class="is-active"><a href="#home">Главная</a></li> <!-- Активный пункт: якорь на секцию home -->
+          <li><a href="#about">О нас</a></li> <!-- Ссылка на блок «О нас» -->
+          <li><a href="#awards">Награды</a></li> <!-- Ссылка на блок «Награды» -->
+          <li><a href="#tariffs">Тарифы</a></li> <!-- Ссылка на блок тарифов (у тебя секция называется programs) -->
+          <li><a href="#promo">Акции</a></li> <!-- Ссылка на блок акций (у тебя секция называется sales) -->
+          <li><a href="#signup">Запись</a></li> <!-- Ссылка на форму записи -->
+          <li><a href="#contacts">Контакты</a></li> <!-- Ссылка на контакты -->
         </ul>
       </nav>
 
-      <div class="hdr-cta">
-        <ul class="hdr-socials" aria-label="Соцсети">
-          <li><a href="#"><img src="images/Телеграм.png" alt="tg"></a></li>
-          <li><a href="#"><img src="images/Вайбер.png" alt="wa"></a></li>
-          <li><a href="#"><img src="images/Ватсап.png" alt="vb"></a></li>
+      <div class="hdr-cta"> <!-- Правая область шапки: соцсети, телефон, кнопка -->
+        <ul class="hdr-socials" aria-label="Соцсети"> <!-- Иконки соцсетей в шапке -->
+          <li><a href="#"><img src="images/Телеграм.png" alt="tg"></a></li> <!-- Ссылка на Telegram -->
+          <li><a href="#"><img src="images/Вайбер.png" alt="wa"></a></li> <!-- Ссылка на Viber -->
+          <li><a href="#"><img src="images/Ватсап.png" alt="vb"></a></li> <!-- Ссылка на WhatsApp -->
         </ul>
-        <a class="hdr-phone" href="tel:+79106849053">+7 (910) 684-90-53</a>
-        <a class="hdr-btn" href="#more"><span>Подробнее</span><img src="images/Кнопка подробнее.png" alt=""></a>
+        <a class="hdr-phone" href="tel:+79106849053">+7 (910) 684-90-53</a> <!-- Кликабельный телефон -->
+        <a class="hdr-btn" href="#more"><span>Подробнее</span><img src="images/Кнопка подробнее.png" alt=""></a> <!-- CTA-кнопка -->
       </div>
     </div>
   </header>
-
   <!-- ======= HERO ======= -->
-  <section class="hero section">
-    <div class="container hero__inner">
-      <div>
-        <p class="note">ул. Черкизова 14, Москва</p>
-        <h1 class="hero__title">Покоряйте <span>волны</span> вместе с нами!</h1>
+  <section class="hero section"> <!-- Герой-секция: крупный заголовок и лид-текст -->
+    <div class="container hero__inner"> <!-- Контейнер с внутренней сеткой/отступами -->
+      <div> <!-- Левая колонка героя (контент) -->
+        <p class="note">ул. Черкизова 14, Москва</p> <!-- Акцентная подпись-адрес -->
+        <h1 class="hero__title">Покоряйте <span>волны</span> вместе с нами!</h1> <!-- Главный заголовок страницы -->
         <p class="hero__lead">Сёрф-обучение для взрослых и детей. Индивидуальные и групповые занятия, сертифицированные
-          инструкторы, безопасная экипировка и бодрая морская кардио‑радость.</p>
-        <div style="margin-top:18px;display:flex;gap:12px;flex-wrap:wrap">
-          <a class="btn btn--fill" href="#programs">Выбрать программу</a>
-          <a class="btn" href="#signup">Записаться</a>
+          инструкторы, безопасная экипировка и бодрая морская кардио-радость.</p> <!-- Лид-абзац под заголовком -->
+        <div style="margin-top:18px;display:flex;gap:12px;flex-wrap:wrap"> <!-- Обёртка кнопок (инлайн-стили для отступов) -->
+          <a class="btn btn--fill" href="#programs">Выбрать программу</a> <!-- Кнопка «заполненная» -->
+          <a class="btn" href="#signup">Записаться</a> <!-- Вторичная кнопка -->
         </div>
-        <div class="features">
+        <div class="features"> <!-- Сетка карточек преимуществ -->
           <!-- 1 -->
-          <div class="card feature card--tight">
-            <img class="feature__thumb" src="images/Картинка 1.png" alt="Восстановление" />
-            <div>
-              <div class="feature__title">Профессиональное руководство</div>
-              <div class="feature__note">опытные инструкторы помогут вам освоить основы и быстро совершенствоваться.</div>
+          <div class="card feature card--tight"> <!-- Карточка преимущества -->
+            <img class="feature__thumb" src="images/Картинка 1.png" alt="Восстановление" /> <!-- Иконка/миниатюра -->
+            <div> <!-- Текстовая часть карточки -->
+              <div class="feature__title">Профессиональное руководство</div> <!-- Заголовок карточки -->
+              <div class="feature__note">опытные инструкторы помогут вам освоить основы и быстро совершенствоваться.</div> <!-- Описание -->
             </div>
-            <span class="badge">1</span>
+            <span class="badge">1</span> <!-- Маркер-номер карточки -->
           </div>
           <!-- 2 -->
-          <div class="card feature card--tight">
+          <div class="card feature card--tight"> <!-- Вторая карточка -->
             <img class="feature__thumb" src="images/Картинка 2.png" alt="Интенсивность" />
             <div>
               <div class="feature__title">Качественное оборудование</div>
@@ -76,7 +75,7 @@
             <span class="badge">2</span>
           </div>
           <!-- 3 -->
-          <div class="card feature card--tight">
+          <div class="card feature card--tight"> <!-- Третья карточка -->
             <img class="feature__thumb" src="images/Картинка 3.png" alt="Безопасность" />
             <div>
               <div class="feature__title">Благоприятная обстановка</div>
@@ -85,7 +84,7 @@
             <span class="badge">3</span>
           </div>
           <!-- 4 -->
-          <div class="card feature card--tight">
+          <div class="card feature card--tight"> <!-- Четвёртая карточка -->
             <img class="feature__thumb" src="images/Картинка 4.png" alt="Дружелюбие" />
             <div>
               <div class="feature__title">Дополнительные услуги</div>
@@ -99,44 +98,43 @@
   </section>
 
   <!-- ======= ABOUT (сёрфер слева, текст справа) ======= -->
-<section class="section" id="about">
-  <div class="container">
-    <h2 class="h2">Серфинг <span class="note">это стиль жизни</span></h2>
+<section class="section" id="about"> <!-- Блок «О нас» с якорем -->
+  <div class="container"> <!-- Центрирующий контейнер -->
+    <h2 class="h2">Серфинг <span class="note">это стиль жизни</span></h2> <!-- Заголовок раздела с акцентом -->
 
-    <div class="about">
+    <div class="about"> <!-- Сетка из двух колонок -->
       <!-- ЛЕВАЯ КОЛОНКА -->
-      <figure class="about__media">
-        <img class="about__img" src="images/Блок с фото.png" alt="Сёрфер">
+      <figure class="about__media"> <!-- Обёртка изображения (семантика figure) -->
+        <img class="about__img" src="images/Блок с фото.png" alt="Сёрфер"> <!-- Большое фото слева -->
       </figure>
-
-      <!-- ПРАВАЯ КОЛОНКА -->
-       <div class="adout_right">
-      <aside class="about__panel">
-        <div class="about__title">SurfTrainCo —</div>
-        <p>это компания по обучению сёрфингу, расположенная в Москве, которая открылась в 2018 году.</p>
-        <p>Её миссия состоит в том, чтобы обеспечить доступное, всестороннее и приятное обучение сёрфингу для всех уровней навыков и возрастов.</p>
+       <!-- ПРАВАЯ КОЛОНКА -->
+       <div class="adout_right"> <!-- Правая колонка (описание/статистика) -->
+      <aside class="about__panel"> <!-- Выделенная панель с текстом -->
+        <div class="about__title">SurfTrainCo —</div> <!-- Заголовок панели -->
+        <p>это компания по обучению сёрфингу, расположенная в Москве, которая открылась в 2018 году.</p> <!-- Абзац 1 -->
+        <p>Её миссия состоит в том, чтобы обеспечить доступное, всестороннее и приятное обучение сёрфингу для всех уровней навыков и возрастов.</p> <!-- Абзац 2 -->
 
        
       </aside> 
-      <div class="about__stats">
-          <div class="about__avatars">
-            <img class="about__avatar" src="images/Аватар 1.png" alt="">
-            <img class="about__avatar" src="images/Аватар 2.png" alt="">
-            <img class="about__avatar" src="images/Аватар 3.png" alt="">
+      <div class="about__stats"> <!-- Небольшой блок статистики под панелью -->
+          <div class="about__avatars"> <!-- Стек аватаров (иконки людей/учеников) -->
+            <img class="about__avatar" src="images/Аватар 1.png" alt=""> <!-- Аватар 1 -->
+            <img class="about__avatar" src="images/Аватар 2.png" alt=""> <!-- Аватар 2 -->
+            <img class="about__avatar" src="images/Аватар 3.png" alt=""> <!-- Аватар 3 -->
           </div>
-          <span class="about__pill"><b>2000+</b>&nbsp;учеников</span>
+          <span class="about__pill"><b>2000+</b>&nbsp;учеников</span> <!-- Чип со счётчиком -->
         </div>
         </div>
     </div>
   </div>
 </section>
 
-  <section class="section">
-    <div class="container intro">
-      <div class="text-block">
-       <p class="about__text">
+  <section class="section"> <!-- Дополнительный вступительный текстовый блок -->
+    <div class="container intro"> <!-- Контейнер + класс для доп.стилей -->
+      <div class="text-block"> <!-- Белая карточка с текстом -->
+       <p class="about__text"> <!-- Крупный вдохновляющий абзац -->
         Не бойтесь испытывать себя и свои возможности — поддайтесь волнам и пусть они помогут вам раскрыть свой истинный потенциал.
-          <span class="about__text-underline">
+          <span class="about__text-underline"> <!-- Фраза с «волнистым» подчёркиванием -->
             Погрузитесь в мир сёрфинга и почувствуйте, как ваша жизнь наполняется яркими эмоциями и волнующими приключениями.
           </span>
              Погнали волну!
@@ -146,25 +144,25 @@
   </section>
 
   <!-- ======= AWARDS ======= -->
-  <section id="awards" class="section">
-    <div class="container">
-      <h2 class="h2">Награды <span class="note">нашего клуба</span></h2>
-      <div class="ribbon">
-        <article class="card">
-          <img src="images/influense2.png" alt="«За успешное продвижение серфинга»" />
-          <div style="padding:12px 12px 16px">
-            <strong>«За успешное продвижение серфинга»</strong>
-            <div class="feature__note">Награда от Международного Олимпийского Комитета</div>
+  <section id="awards" class="section"> <!-- Раздел «Награды» (лента карточек) -->
+    <div class="container"> <!-- Центровка/ширина -->
+      <h2 class="h2">Награды <span class="note">нашего клуба</span></h2> <!-- Заголовок раздела -->
+      <div class="ribbon"> <!-- Горизонтальная прокручиваемая лента карточек -->
+        <article class="card"> <!-- Карточка награды -->
+          <img src="images/influense2.png" alt="«За успешное продвижение серфинга»" /> <!-- Картинка награды -->
+          <div style="padding:12px 12px 16px"> <!-- Отступы контента карточки (инлайн) -->
+            <strong>«За успешное продвижение серфинга»</strong> <!-- Название награды -->
+            <div class="feature__note">Награда от Международного Олимпийского Комитета</div> <!-- Краткое описание -->
           </div>
         </article>
-        <article class="card">
+        <article class="card"> <!-- Вторая карточка -->
           <img src="images/Картинка (1).png" alt="«Лучший инструктор по серфингу 2022»" />
           <div style="padding:12px 12px 16px">
             <strong>«Лучший инструктор по серфингу 2022»</strong>
             <div class="feature__note">Награда от международной организации Surfers Against Sewage (SAS)</div>
           </div>
         </article>
-        <article class="card">
+        <article class="card"> <!-- Третья карточка -->
           <img src="images/influense4.png" alt="«За исключительные достижения в серфинге»" />
           <div style="padding:12px 12px 16px">
             <strong>«За исключительные достижения в серфинге»</strong>
@@ -174,31 +172,29 @@
       </div>
     </div>
   </section>
-
   <!-- ======= PROGRAMS ======= -->
-  <section id="programs" class="section">
+  <section id="programs" class="section"> <!-- Раздел с тарифами/программами обучения -->
     <div class="container">
-      <h2 class="h2">Программы <span class="note">обучения</span></h2>
-      <div class="pricing">
-        <article class="card price">
+      <h2 class="h2">Программы <span class="note">обучения</span></h2> <!-- Заголовок раздела -->
+      <div class="pricing"> <!-- Сетка тарифов -->
+        <article class="card price"> <!-- Карточка тарифа 1 -->
           <img src="images/Иконка (4).png" alt="Easy Start"
-            style="border-top-left-radius:var(--radius);border-top-right-radius:var(--radius)">
-          <div style="padding:16px">
-            <div class="price__title">Easy Start</div>
-            <ul class="price__list">
+            style="border-top-left-radius:var(--radius);border-top-right-radius:var(--radius)"> <!-- Картинка тарифа с скруглением сверху -->
+          <div style="padding:16px"> <!-- Тело карточки с отступом -->
+            <div class="price__title">Easy Start</div> <!-- Название тарифа -->
+            <ul class="price__list"> <!-- Особенности тарифа списком -->
               <li>Воссозданный искусственный речной порог</li>
               <li>Доска с плавниками, как на океане</li>
               <li>Даёт возможность отработать технику поворотов, трюки на волне, развить баланс и мышечную память</li>
               <li>Помогает подготовиться к катанию на океанских волнах (работа тела после поп-ап)</li>
             </ul>
-            <div class="strike">29 000 руб.</div>
-            <div class="big">12 990 руб.</div>
-            <a class="btn btn--fill" href="#signup" style="margin-top:10px">Выбрать тариф</a>
+            <div class="strike">29 000 руб.</div> <!-- Старая цена перечёркнутая -->
+            <div class="big">12 990 руб.</div> <!-- Новая цена крупно -->
+            <a class="btn btn--fill" href="#signup" style="margin-top:10px">Выбрать тариф</a> <!-- CTA-кнопка тарифа -->
           </div>
         </article>
 
-
-        <article class="card price">
+        <article class="card price"> <!-- Карточка тарифа 2 -->
           <img src="images/Иконка (9).png" alt="Flow Rider"
             style="border-top-left-radius:var(--radius);border-top-right-radius:var(--radius)">
           <div style="padding:16px">
@@ -219,103 +215,100 @@
   </section>
 
   <!-- ======= SALES ======= -->
-  <section id="sales" class="section">
+  <section id="sales" class="section"> <!-- Раздел «Акции и скидки» -->
     <div class="container">
-      <h2 class="h2">Акции <span class="note">и скидки</span></h2>
-      <div class="gallery">
-        <a class="card media" href="#">
-          <img class="media__img" src="images/card (1).png" alt="-15% на первую тренировку">
+      <h2 class="h2">Акции <span class="note">и скидки</span></h2> <!-- Заголовок -->
+      <div class="gallery"> <!-- Сетка карточек акций -->
+        <a class="card media" href="#"> <!-- Карточка-линк 1 -->
+          <img class="media__img" src="images/card (1).png" alt="-15% на первую тренировку"> <!-- Картинка акции -->
         </a>
-         <a class="card media" href="#">
+         <a class="card media" href="#"> <!-- Карточка-линк 2 -->
           <img class="media__img" src="images/card.png" alt="Семейный день">
         </a>
-        <a class="card media" href="#">
+        <a class="card media" href="#"> <!-- Карточка-линк 3 -->
           <img class="media__img" src="images/card (2).png" alt="Сертификаты">
         </a>
       </div>
     </div>
   </section>
 
-  <section class="section">
+  <section class="section"> <!-- Ещё один мотивирующий текстовый блок -->
     <div class="container intro">
       <div class="text-block">
-       <p class="about__text">
+       <p class="about__text"> <!-- Абзац с подчёркиваемой частью -->
            Помните, что каждый ваш выход на доску - это возможность выйти за пределы
            своих комфортных зон и стать лучше, сильнее и увереннее. Поверьте в себя, стремитесь к новым вершинам 
-           <span class="about__text-underline">
+           <span class="about__text-underline"> <!-- Участок с волнистым подчёркиванием -->
            и не забывайте наслаждаться каждым мгновением на доске.
            </span>
         </p>
       </div>
     </div>
   </section>
-
-<section id="signup" class="section">
+  <section id="signup" class="section"> <!-- Раздел записи на занятие -->
   <div class="container">
-    <h2 class="h2">Запись <span class="note">на занятие</span></h2>
+    <h2 class="h2">Запись <span class="note">на занятие</span></h2> <!-- Заголовок раздела -->
 
-    <div class="signup">
+    <div class="signup"> <!-- Карточка с формой и превью -->
       <!-- ЛЕВАЯ КОЛОНКА: форма -->
-      <form class="signup__form" onsubmit="event.preventDefault();alert('Заявка отправлена!');">
+      <form class="signup__form" onsubmit="event.preventDefault();alert('Заявка отправлена!');"> <!-- Форма (без отправки на сервер) -->
       
-          <div class="signup__row">
-            <select class="select" required>
-            <option value="" selected disabled>Выберите дату</option>
+          <div class="signup__row"> <!-- Ряд 1: дата + время -->
+            <select class="select" required> <!-- Селект даты (обязательное поле) -->
+            <option value="" selected disabled>Выберите дату</option> <!-- Плейсхолдер -->
             <option>21.07</option>
             <option>28.07</option>
           </select>
-          <select class="select" required>
+          <select class="select" required> <!-- Селект времени -->
             <option value="" selected disabled>Выберите время</option>
             <option>10:00</option>
             <option>14:00</option>
           </select>
         </div>
 
-        <div class="signup__row">
-          <select class="select signup__full" required>
+        <div class="signup__row"> <!-- Ряд 2: программа на всю ширину -->
+          <select class="select signup__full" required> <!-- Селект с классом, растягивающим на 2 колонки -->
             <option value="" selected disabled>Выберите программу</option>
             <option>Easy Start</option>
             <option>Flow Rider</option>
           </select>
           </div>
 
-          <div class="signup__row">
-          <input class="input" placeholder="Ваше имя" required>
-          <input class="input" type="tel" placeholder="Телефон" required>
+          <div class="signup__row"> <!-- Ряд 3: имя + телефон -->
+          <input class="input" placeholder="Ваше имя" required> <!-- Поле имени -->
+          <input class="input" type="tel" placeholder="Телефон" required> <!-- Поле телефона -->
         </div>
 
-        <div class="signup__actions">
-          <button class="btn btn--fill" type="submit">Записаться онлайн</button>
-          <span class="feature__note">Нажимая на кнопку, вы соглашаетесь с политикой обработки данных.</span>
+        <div class="signup__actions"> <!-- Низ формы: кнопка + подпись -->
+          <button class="btn btn--fill" type="submit">Записаться онлайн</button> <!-- Кнопка отправки (фейковый submit) -->
+          <span class="feature__note">Нажимая на кнопку, вы соглашаетесь с политикой обработки данных.</span> <!-- Юр. подпись -->
         </div>
       </form>
 
       <!-- ПРАВАЯ КОЛОНКА: превью -->
-      <figure class="signup__preview">
-        <img src="images/img.png" alt="Сёрфер">
+      <figure class="signup__preview"> <!-- Картинка-превью справа -->
+        <img src="images/img.png" alt="Сёрфер"> <!-- Фото/иллюстрация -->
       </figure>
     </div>
   </div>
 </section>
 
   <!-- ======= MAP ======= -->
-  <section class="section">
+  <section class="section"> <!-- Раздел с картой -->
     <div class="container">
-      <!-- <h2 class="h2">Мы на карте <span class="note">где искать?</span></h2> -->
-      <div class="map card">
-        <!-- Замените на скрин Google Maps вашего адреса: img/map.jpg -->
-        <img class="map__img" src="images/Мы на карте.png" alt="Карта" />
+      <div class="map card"> <!-- Карточка-обёртка для изображения карты -->
+        <img class="map__img" src="images/Мы на карте.png" alt="Карта" /> <!-- Изображение карты -->
       </div>
     </div>
   </section>
 
   <!-- ======= FOOTER ======= -->
-  <footer class="footer container">
-    <div style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap">
-      <div>© 2025 SurfTrainCo. Ветер в паруса и немного соли на губах.</div>
-      <div>inst • tg • vk</div>
+  <footer class="footer container"> <!-- Подвал сайта внутри общего контейнера -->
+    <div style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap"> <!-- Гибкая строка: текст слева, соцсокращения справа -->
+      <div>© 2025 SurfTrainCo. Ветер в паруса и немного соли на губах.</div> <!-- Авторское право/слоган -->
+      <div>inst • tg • vk</div> <!-- Короткие подписи соцсетей (можно заменить на реальные ссылки) -->
     </div>
   </footer>
 
 </body>
-</html>
+</html> <!-- Конец HTML-документа -->
